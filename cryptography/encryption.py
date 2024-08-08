@@ -29,3 +29,17 @@ def decrypt(text, key):
     for char in text:
         result += chr((ord(char) - key) % 256)
     return result
+
+
+# Example usage of encrypt and decrypt functions
+
+text = "Hello, World!"
+key = 5
+
+# Encrypt the text
+encrypted_text = encrypt(text, key)
+print("Encrypted text:", encrypted_text)
+
+# Decrypt the text
+decrypted_text = decrypt(encrypted_text, key)
+print("Decrypted text:", decrypted_text)
